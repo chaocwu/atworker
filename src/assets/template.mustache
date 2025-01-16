@@ -1,0 +1,13 @@
+import allure
+
+
+@allure.suite("{{suite}}")
+@allure.title("{{title}}")
+@allure.severity(allure.severity_level.{{severity}})
+@allure.label("owner", "{{owner}}")
+def test_{{code}}():
+    {{#steps}}
+    with allure.step("{{step}}"):
+        with allure.step("{{expect}}"):
+            ...
+    {{/steps}}
